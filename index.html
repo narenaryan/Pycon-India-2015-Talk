@@ -55,12 +55,12 @@
 				<section data-background="img/profile.jpg" data-background-size="1200px">
 				</section>
 
-				<section>
+				<section data-background="#b5533c">
 					<h2>What Riak can do?</h2>
 					<p>
 						    <q>Riak is a database that helps any business by supporting these 4 features
         					<center>
-        					<div style="color:#4fffff">
+        					<div style="color:#C2D4D4">
         					<ol> 
         					<li><strong>100% uptime</strong></li>
         					<li> <strong>Infinite scale*</strong></li>
@@ -73,7 +73,7 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
+					<section data-background="#61B556">
 						<h2>Why care fault tolerance?</h2>
 						<p> Companies rely on data to power their day-today
 operations. Even minutes of application
@@ -86,15 +86,19 @@ to millions in lost revenue</p>
 						<h2 style="color:red">Never lose a customer</h2>
 					</section>
 
-					<section>
+					<section data-background="#61618E">
 						<h2>What exactly Riak is?</h2>
 						<p> Different than traditional relational databases and other “NoSQL” (non-relational) databases, Riak offers benefits of enormous availability, replication and monitoring – all in a highly distributed deployment</p>
 						<br>
+                                               <ul>
+						<li>Built on Erlang for rock solid stability</li>
+					        <li>Open source implementation of Dynamo paper by Amazon</li>
+						</ul>
 						
 					</section>
 				</section>
 
-				<section>
+				<section data-background="#b5533c">
 					<h2>Distributed databases</h2>
 					<p>
 						<strong>Data distrbution</strong> is achieved through two things. 
@@ -131,7 +135,7 @@ to millions in lost revenue</p>
 			</section>
 -->
 				
-				<section>
+				<section data-background="#61B556">
 					<h2>CAP Theorom</h2>
 					<p>
 						<strong>Brewer's CAP Theorom</strong> states that CAP loosely states that you can have a C (consistent),
@@ -145,7 +149,7 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 					
 				</section>
 
-				<section>
+				<section data-background="#b5533c">
 				<h2>Riak's tunable CAP parameters</h2>
 				Riak’s solution is based on Amazon Dynamo’s novel approach of a tunable AP system. Riak has a two knob theory which sets both levels of availlability and consistency.<br /><br /> 
 			
@@ -155,7 +159,7 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 				</ul>
 				
 				</section>
-				<section>
+				<section data-background="#61618E">
 					<h2>Riak N-R-W strategy</h2>
 					<ol>
 					<li> <strong>N</strong> - No of nodes to replicate data</li>
@@ -170,7 +174,7 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 				</section>
 
 				<section>
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+				<section data-transition="slide" data-background="#61618E" data-background-transition="zoom">
 					<h2>Is Riak ACID?</h2>
 					<ul><li>Atomic</li> 
 					<li>Consistent</li> 
@@ -184,7 +188,7 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 				-->
 				</section>
 				<section data-transition="slide" data-background="#b5566c" data-background-transition="zoom">
-				<h2>No, Riak is BASE</h2>
+				<h2>Do you know, Riak is BASE</h2>
 				<ul><li>Basically Available</li> 
 					<li>Soft-state</li> 
 					<li>Eventually consistent</li> 
@@ -207,7 +211,7 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 				</h3>
 				</section>
 				<section>
-				<section>
+				<section data-background="#61B556">
 					<h2>I love Python</h2>
 					<strong>because of it's</strong><br /></br>
 					<ol>
@@ -222,13 +226,13 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 
 				</section>
 				</section>
-				<section>
+				<section data-background="#b5533c">
 					<h2>Does Riak has a Python client</h2>
 					<p>Yes, Riak has six official clients for Major programming languages.</p>
 					Python is in first three clients Riak 1.0 supported.
 				</section>
 
-				<section>
+				<section data-background="#61B556">
 				    <h2> Riak for impatient</h2>
 					<pre><code data-trim contenteditable>
 import riak
@@ -249,7 +253,7 @@ person.store()
 				</section>
 
 				<section>
-				<section>
+				<section data-background="#b5533c">
 					<h2> 4 simple methods to start </h2>
 					<ol>
 					<li>RiakClient</li>
@@ -258,7 +262,7 @@ person.store()
 					<li>store</li>
 					</ol>
 				</section>
-				<section>
+				<section data-background="#61618E">
 				<p><strong> RiakClient </strong> - creates a client connnection to Database</p>
 				<p><strong> bucket</strong> - Creates a bucket if not exists, else uses it</p>
 				<p><strong> new </strong> - creates a new key-value data pair</p>
@@ -266,13 +270,13 @@ person.store()
 				</section>
 				</section>
 
-				<section>
+				<section data-background="#61B556">
 				<section>
 				<h2> Two more methods to complete simplicity</h2>
 				<p><strong>get</strong> - Fetches a bucket data row using key</p>
 				<p><strong>get_data</strong> - Fetches value associated for that key</p>
 				</section>
-				<section>
+				<section data-background="#b5533c">
 
 				<h2> See how code works</h2>
 					<pre><code data-trim contenteditable>
@@ -290,7 +294,7 @@ naren_dict = naren.get_data()
 				</section>
 </section>
 
-<section>
+<section data-background="#b5566c">
 	<h2>Riak client variations</h2>
 <pre><code data-trim contenteditable>
 RiakClient()
@@ -302,7 +306,7 @@ RiakClient(nodes=[{'host':'127.0.0.1','http_port':8098}])
 <p><strong>Nodes</strong> are the remote systems or virtual containers running Riak Servers . When your data size is increasing grow your data horizontally by allocating more nodes to cluster</p>
 </section>
                 <section>
-				<section>
+				<section data-background="#61B556">
 					<h2>Riak Search</h2>
                     <p>Riak Search 2.0 is an integration of Solr (for indexing and querying) and Riak (for storage and distribution).It has search capability on distributed riak servers</p>
 
@@ -322,7 +326,7 @@ print results['docs']
             </section>
 
                     
-                <section>
+                <section data-background="#61618E">
 					<h2>What we are gaining</h2>
 					<p> The advantages of using Riak and Python are:</p>
                     <ul>
@@ -335,7 +339,7 @@ print results['docs']
                     </ul>
 				</section>
                     
-                <section>
+                <section data-background="#b5533c">
 					<h2>Where you should not use Riak?</h2>
                     <p>You should not use Riak</p>
                     <ul>
@@ -345,12 +349,12 @@ print results['docs']
                     </ul>
 				</section>
                     
-                <section>
+                <section data-background="#61B556"> 
                     <h2>Where you should use Riak?</h2>
 				    <img src="img/critical_data.png" height="450px" />
 				</section>
                     
-				<section>
+				<section data-background="#939300">
 					<h2>Much more</h2>
 					<ul>
 						<li><a href = "http://littleriakbook.com/"> Riak Book</a></li>
@@ -361,11 +365,11 @@ print results['docs']
 				</section>
 
 				<section style="text-align: left;">
-					<h1>THE END</h1>
+					<h1>Thank You</h1>
 					<p>
-						- <a href="https://twitter.com/Narenarya3">Thank you all</a> <br>
-						- <a href="https://github.com/narenaryan">Source code &amp; documentation</a><br />
-                        		- <a href="http://impythonist.in">Website</a>
+						- <a href="https://twitter.com/Narenarya3">@Narenarya3</a> <br>
+						- <a href="https://github.com/narenaryan/Pycon-India-2015-Talk">Source code for this slides</a><br />
+                        		- <a href="http://impythonist.wordpress.com">Website</a>
 					</p>
 				</section>
 
