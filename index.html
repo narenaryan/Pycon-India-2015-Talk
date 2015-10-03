@@ -45,8 +45,6 @@
 					<h3> A perfect couple for huge scale distributed computing</h3>
 					<div>
 					<p style="position: relative;right:-300px;bottom:-70px;">
-						<small>Talk by &nbsp;&nbsp;<a href="http://www.impythonist.in">Naren Arya</a> @ Knowlarity Communcations 
-						</small><br>
 						twitter <a href="http://twitter.com/Narenarya3">@Narenarya3</a><br>
 						Github <a href="http://github.com/Narenarya3">@narenaryan</a>
 					</p>
@@ -85,7 +83,7 @@ to millions in lost revenue</p>
 						<br>
 					</section>
 					<section data-background="img/business_loss.gif">
-						<h2 style="color:red">Never lose a customer</h2>
+						<h2 style="color:green;position:relative;left:300px">Never lose a customer in the business due to latency</h2>
 					</section>
 
 					<section data-background="#61618E">
@@ -99,6 +97,10 @@ to millions in lost revenue</p>
 						
 					</section>
 				</section>
+
+				<section data-background="img/midnight_call.jpg">
+						<h2 style="color:red">No 2:00PM emergency calls for an engineer</h2>
+					</section>
 
 				<section data-background="#b5533c">
 					<h2>Distributed databases</h2>
@@ -177,17 +179,38 @@ A (available), or P (partition-tolerant) system, but you can only choose any 2 o
 
 				<section>
 				<section data-transition="slide" data-background="#61618E" data-background-transition="zoom">
-					<h2>Is Riak ACID?</h2>
-					<ul><li>Atomic</li> 
-					<li>Consistent</li> 
-					<li>Isolated</li> 
-					<li>Durable</li>
+					<h2>Riak's Consistent Hashing Strategy</h2>
+					<img src='img/riak_ring.png' style="position:relative;left:-100px;" height="380"/>
+					<img src='img/riak_hash.png' height="300"/>
 					</ul>
 					</p>
 
 					<!--
 					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
 				-->
+				</section>
+				<section data-transition="slide" data-background="#61B556" data-background-transition="zoom">
+				<h2>Operational simplicity</h2>
+				<pre><code data-trim contenteditable>
+# Add a node to existing cluster
+$ riak-admin cluster join riak@127.0.0.1
+
+# Remove a node from existing cluster
+$ riak-admin cluster leave NODE
+
+# Replaces a failed node with new one in cluster
+$ riak-admin cluster replace NODE_1 NODE_2
+
+# Shows the changes we made to cluster
+$ riak-admin cluster plan
+
+# Only modifies cluster state after commiting
+$ riak-admin cluster replace NODE_1 NODE_2
+
+#Check ring status
+$ riak-admin cluster status
+					</code></pre>
+
 				</section>
 				<section data-transition="slide" data-background="#b5566c" data-background-transition="zoom">
 				<h2>Do you know, Riak is BASE</h2>
@@ -265,10 +288,11 @@ person.store()
 					</ol>
 				</section>
 				<section data-background="#61618E">
+				<h2>Basic python client methods</h2>
 				<p><strong> RiakClient </strong> - creates a client connnection to Database</p>
 				<p><strong> bucket</strong> - Creates a bucket if not exists, else uses it</p>
 				<p><strong> new </strong> - creates a new key-value data pair</p>
-				<p><strong> RiakClient</strong> - Stores key-value pair in database</p>
+				<p><strong> store</strong> - Stores key-value pair in database</p>
 				</section>
 				</section>
 
@@ -366,7 +390,7 @@ print results['docs']
 					</ul>
 				</section>
 
-				<section style="text-align: left;">
+				<section style="text-align: left;" data-background="#000000">
 					<h1>Thank You</h1>
 					<h2>narearya@live.com</h2>
 					<p>
@@ -392,7 +416,7 @@ print results['docs']
 				progress: true,
 				history: true,
 				center: true,
-
+				slideNumber: true,
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
